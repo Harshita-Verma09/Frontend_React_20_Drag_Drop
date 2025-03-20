@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.inp {
+    margin: 1rem;
+    padding: 6px;
+    width: 30%;
+    border: 0.5px solid gray;
+    border-radius: 8px;
+}
+
+/* Board layout */
+.board {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 1.5rem;
+    flex-wrap: wrap; /* Allows responsiveness */
+    gap: 10px;
+}
+
+/* Columns */
+.todo, .doing, .done {
+    width: 30%;
+    min-height: 400px;
+    padding: 10px;
+}
+
+/* Column headers */
+.todo-col {
+    background-color: rgb(217, 203, 3);
+    padding: 10px 0;
+}
+
+.doing-col {
+    background-color: rgb(90, 235, 187);
+    margin: 0 1rem;
+    padding: 10px 0;
+}
+
+.done-col {
+    background-color: rgb(158, 241, 33);
+    padding: 10px 0;
+}
+
+/* Task items */
+.task-item {
+    border: 0.7px solid rgb(192, 191, 191);
+    border-radius: 10px;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 8px;
+    cursor: grab;
+    font-size: 1.6rem;
+    margin: 12px 0;
+}
+
+/* Buttons */
+.btn > i {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn > i:hover {
+    background-color: rgb(243, 67, 126);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todo, .doing, .done {
+        width: 80%;
+    }
+
+    .inp {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .todo, .doing, .done {
+        width: 90%;
+    }
+
+    .inp {
+        width: 80%;
+    }
+
+    .task-item {
+        font-size: 1.2rem;
+    }
+}
+    
